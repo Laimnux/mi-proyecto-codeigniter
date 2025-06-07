@@ -6,7 +6,8 @@
 <br>
 <h2>Nuevo Empleado</h2>
 <br>
-
+<a href="<?php echo base_url('/empleado');?>"class= "bnt bnt-success">Regresar<a>
+<br>
 <!--como crearmos un nuevo empleado  b-from-enctype -->
 
 <form method="post" action="<?php echo base_url('/empleados/guardar'); ?>" enctype="multipart/form-data">

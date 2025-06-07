@@ -20,10 +20,13 @@ $routes->get('/empleados/nuevo','Empleados::crear');
 */
 $routes->get('/compra/(:num)','productos::show2/$1');
 $routes->get('/compras/(:alpha)/(:num)','Productos::cat/$sopaDePollo/$2');
+
 $routes->get('/empleados/crear','Empleados::crear');
-$routes->get('/empleados/guardar','Empleados::guardar'); //envia los datos del forn a la base
-$routes->get('/empleados/editar/(:num)','Empleados::acualizar/$1');
+$routes->post('/empleados/guardar','Empleados::guardar'); //envia los datos del forn a la base
+
 $routes->get('/empleados/eliminar/(:num)','Empleados::elimiar/$1');
+
+$routes->post('/empleados/actualizar/(:num)','Empleados::actualizar/$1')
 
 
 ?>

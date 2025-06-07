@@ -6,7 +6,7 @@
 <br>
 <h2>EMPLEADOS</h2>
 <br>
-<a href = "<?php echo base_url('empleados/crear');?>" class="btn btn-danger">Agregar Nuevo Empleado</a>
+<a href = "<?php echo base_url('/empleados/crear');?>" class="btn btn-danger">Agregar Nuevo Empleado</a>
 <br>
 <br>
 <!--Extraido de bustrap--->
@@ -53,8 +53,8 @@
   
 </table>
 <br>
-<a href= "<?php echo base_url('/empleados/editar/'.$emp['ced_empleado'])?>"class="btn btn-dark">Editar Empleado</a>
-<a href= "<?php echo base_url('/empleados/eliminar/'.$emp['ced_empleado'])?>"class="btn btn-primary">Elininar Empleado</a>
+<a href= "<?php echo base_url('/empleado/editar/'.$emp['ced_empleado'])?>"class="btn btn-dark">Editar Empleado</a>
+<a href= "<?php echo base_url('/empleado/eliminar/'.$emp['ced_empleado'])?>"class="btn btn-primary">Elininar Empleado</a>
 <br>
 <?php
     echo $this -> endSection();

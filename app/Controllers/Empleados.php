@@ -14,8 +14,36 @@
             return view("empleado/index", $data);
         }
 
-        public function crear(){
-            return view('empleados/crear');
+        public function crear()
+        {
+            return view('empleado/crear');
+        }
+        //metodo para guardar 
+        public function guardar()
+        {
+            $model = new EmpleadoModel();
+            $model ->insert($this->request->getPost());
+            return redirect()->to('/empleado');
+        }
+        //editar
+        public function editar($id)
+        {
+            $model = new EmpleadoModel();
+            $data['empleado'] = $model->find($id);
+            return view('empleado/editar');
+
+        }
+        public function actualizar($id)
+        {
+            $model = new EmpleadoModel();
+            $model ->update($id,$this->request->getPost());
+            return redirect()->to('/empleado');
+        }
+        public function eliminar($id)
+        {
+            $model = new EmpleadoModel();
+            $model ->delite($id);
+            return redirect()->to('/empleado');
         }
     }
 
